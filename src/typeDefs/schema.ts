@@ -8,8 +8,8 @@ export const typeDefs = `#graphql
   }
   type Post {
     id: ID!
-    title: string!
-    content: string!
+    title: String!
+    content: String!
   }
   type Query {
     users: [User]
