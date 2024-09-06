@@ -5,22 +5,36 @@ export const typeDefs = `#graphql
     id: ID!
     name: String!
     email: String!
-    posts:[Post!]
+    posts: [Post!] # Assuming a user has multiple posts
   }
+  
   type Post {
     id: ID!
     title: String!
     content: String!
   }
+
   type Query {
     users: [User]
     user(id: ID!): User
+    posts: [Post]
+    post(id: ID!): Post
   }
+
   type Mutation {
     createUser(user: UserInput!): User
+    createPost(post: PostInput!): Post
+    updatePost(id: ID!, post: PostInput!): Post
+    deletePost(id: ID!): Boolean
   }
+
   input UserInput {
     name: String!
     email: String!
+  }
+
+  input PostInput {
+    title: String!
+    content: String!
   }
 `;
