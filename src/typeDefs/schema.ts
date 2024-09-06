@@ -12,6 +12,7 @@ export const typeDefs = `#graphql
     id: ID!
     title: String!
     content: String!
+    users: User!
   }
 
   type Query {
@@ -26,6 +27,8 @@ export const typeDefs = `#graphql
     createPost(post: PostInput!): Post
     updatePost(id: ID!, post: PostInput!): Post
     deletePost(id: ID!): Boolean
+    updateUser(edit: UserInput!, id:ID! ): User
+    deleteUser(id:ID!): User
   }
 
   input UserInput {
@@ -38,3 +41,4 @@ export const typeDefs = `#graphql
     content: String!
   }
 `;
+
