@@ -5,12 +5,15 @@ import {
   updateUser,
   deleteUser,
 } from "./user";
+import {posts, post, createPost, updatePost, deletePost } from "./post"
 
 const createResolvers = {
   Query: {
     // User
     users,
     user,
+    posts,
+    post,
 
     // Post
     // posts,
@@ -19,6 +22,9 @@ const createResolvers = {
   Mutation: {
     // User
     createUser,
+    createPost,
+    updatePost,
+    deletePost,
     updateUser,
     deleteUser,
 
