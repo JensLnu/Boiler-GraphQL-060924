@@ -1,8 +1,8 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
-import { typeDefs } from "./schema.js";
-import createResolvers from "./resolvers.js";
-import pool from "./db.js";
+import { typeDefs } from "./typeDefs/schema.js";
+import createResolvers from "./resolvers/resolvers.js";
+import pool from "./database/db.js";
 
 const resolvers = createResolvers(pool);
 

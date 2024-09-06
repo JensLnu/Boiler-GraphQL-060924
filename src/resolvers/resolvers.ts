@@ -1,5 +1,5 @@
 import { Pool } from "pg";
-import { User } from "./types/types";
+import { User } from "../types/types";
 
 const createResolvers = (pool: Pool) => ({
   Query: {
